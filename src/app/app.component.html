@@ -4,10 +4,12 @@
     routerLink="/crisis-center"
     routerLinkActive="active"
     ariaCurrentWhenActive="page"
-    >Crisi Center</a
+    >Crisis Center</a
   >
   <a routerLink="/heroes" routerLinkActive="active" ariaCurrentWhenActive="page"
     >Heroes</a
   >
 </nav>
-<router-outlet></router-outlet>
+<div [@routeAnimation]="getAnimationData">
+  <router-outlet></router-outlet>
+</div>
