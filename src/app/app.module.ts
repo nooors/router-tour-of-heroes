@@ -18,10 +18,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HeroesModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
   ],
 
   providers: [],

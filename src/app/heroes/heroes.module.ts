@@ -9,6 +9,6 @@ import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 
 @NgModule({
   declarations: [HeroListComponent, HeroDetailComponent],
-  imports: [CommonModule, HeroeRoutingModule, FormsModule],
+  imports: [CommonModule, FormsModule, HeroeRoutingModule],
 })
 export class HeroesModule {}

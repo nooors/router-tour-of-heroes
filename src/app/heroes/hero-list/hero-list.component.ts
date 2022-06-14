@@ -1,12 +1,12 @@
+import { Observable } from "rxjs";
+import { switchMap } from "rxjs/operators";
 import { Component, OnInit } from "@angular/core";
 
 import { ActivatedRoute } from "@angular/router";
-import { Observable } from "rxjs";
-import { switchMap } from "rxjs/operators";
 
 import { Hero } from "../hero";
 import { HeroService } from "../hero.service";
-import { MessageService } from "../../message.service";
+// import { MessageService } from "../../message.service";
 
 @Component({
   selector: "app-hero-list",
