@@ -1,15 +1,29 @@
-<h1>Angular Router</h1>
-<nav>
-  <a
-    routerLink="/crisis-center"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Crisis Center</a
-  >
-  <a routerLink="/heroes" routerLinkActive="active" ariaCurrentWhenActive="page"
-    >Heroes</a
-  >
-</nav>
-<div [@routeAnimation]="getAnimationData()">
-  <router-outlet></router-outlet>
+<div class="wrapper">
+  <h1 class="title">Angular Router</h1>
+  <nav>
+    <a
+      routerLink="/crisis-center"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >Crisis Center</a
+    >
+    <a
+      routerLink="/superheroes"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >Heroes</a
+    >
+
+    <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+  </nav>
+  <div [@routeAnimation]="getAnimationData()">
+    <router-outlet></router-outlet>
+  </div>
+  <router-outlet name="popup"></router-outlet>
 </div>
+
+<!-- This outlets object within an outer object was unnecessary when there was only one route and one unnamed outlet.
+
+The router assumed that your route specification targeted the unnamed primary outlet and created these objects for you.
+
+Routing to a named outlet revealed a router feature: you can target multiple outlets with multiple routes in the same RouterLink directive. -->

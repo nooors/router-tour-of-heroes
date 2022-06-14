@@ -4,21 +4,23 @@ import { RouterModule, Routes } from "@angular/router";
 import { HeroListComponent } from "./hero-list/hero-list.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 
-const routes: Routes = [
+const heroesRoutes: Routes = [
+  { path: "heroes", redirectTo: "/superheroes" },
+  { path: "hero/:id", redirectTo: "/superhero/:id" },
   {
-    path: "heroes",
+    path: "superheroes",
     component: HeroListComponent,
     data: { animation: "heroes" },
   },
   {
-    path: "hero/:id",
+    path: "superhero/:id",
     component: HeroDetailComponent,
     data: { animation: "hero" },
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)], //<-- outside main route app we ues forChild not forRoot
+  imports: [RouterModule.forChild(heroesRoutes)],
   exports: [RouterModule],
 })
-export class HeroeRoutingModule {}
+export class HeroesRoutingModule {}
