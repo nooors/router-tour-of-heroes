@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-
 import { RouterModule, Routes } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
 import { CrisisListComponent } from "./crisis-list/crisis-list.component";
 // import { HeroListComponent } from "../app/heroes/hero-list/hero-list.component";
